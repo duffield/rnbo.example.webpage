@@ -26,19 +26,23 @@ h2, em {
 }
 
 #rnbo-clickable-keyboard > div {
+    cursor: pointer;
     margin: 2px;
-    border: solid black 1px;
+    border: solid blue 1px;
+    background: #f59eff;
     min-height: 50px;
     flex-grow: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.125s background;
 }
 
 #rnbo-clickable-keyboard > div.clicked {
     background: #222222;
     color: #dddddd;
 }
+
 
 #rnbo-parameter-sliders {
     display: flex;
@@ -47,8 +51,33 @@ h2, em {
 
 #rnbo-parameter-sliders > div {
     display: flex;
+    /* background: red; */
 }
 
 #rnbo-parameter-sliders > div > input:first-of-type {
     flex-grow: 1;
 }
+
+.param-slider {
+    -webkit-appearance: none;
+    height: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    background: red;
+}
+
+/* .param-slider::-webkit-slider-runnable-track {
+    background: red;
+    height: 10px;
+    cursor: pointer;
+    border-radius: 16px;
+    background: #444;
+}
+
+.param-slider::-moz-range-track  {
+    background: red;
+    height: 10px;
+    cursor: pointer;
+    border-radius: 16px;
+    background: #444;
+} */

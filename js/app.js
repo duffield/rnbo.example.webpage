@@ -297,6 +297,7 @@ function makeMIDIKeyboard(device) {
         const label = document.createElement("p");
         label.textContent = note;
         key.appendChild(label);
+        key.classList.add("key-bg")
         key.addEventListener("pointerdown", () => {
             let midiChannel = 0;
 
@@ -330,7 +331,9 @@ function makeMIDIKeyboard(device) {
             key.classList.add("clicked");
         });
 
-        key.addEventListener("pointerup", () => key.classList.remove("clicked"));
+        key.addEventListener("pointerup", () => 
+        key.classList.remove("clicked")
+        );
 
         mdiv.appendChild(key);
     });
